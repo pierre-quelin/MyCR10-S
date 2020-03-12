@@ -1,6 +1,7 @@
 # My Creality CR-10S improvements
 
 ## ExtruderFan - Another extruder fan
+![ExtruderFan](https://github.com/pierre-quelin/cr10s/blob/master/ExtruderFan/ExtruderFan.png)
 
 ## JackyTouch - My personal touch
 * 1 x Optocoupler module LM393 comparator Slot-Type 3.3V-5V for arduino based
