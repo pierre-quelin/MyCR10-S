@@ -46,19 +46,113 @@ Connect the VCC wire first, then the GND wire.
 If the power indicator led is off, you made a mistake. Reconnect the GND wire correctly.
 To avoid a short circuit, connect the D0 wire only if the sensor is powered correctly.
 
-## Z-offset setting
+## Calibrating Z-offset (Pronterface)
 
-TODO
+- Enable the probe (Press the button to lower the probe)
+- Launch Pronterface
+- Do Homing and read current Z-offset
 
-## gcode updates (ex. Cura)
+```...
+echo:Z-Probe Offset (mm):
+echo:  M851 Z-6.43
+...
+```
+
+- Reset current offset
+
+```
+M851 Z0
+```
+
+- Store offset to EEPROM
+
+```
+M500
+```
+
+- Set EEPROM as active parameters
+
+```
+M501
+```
+
+- Display current active settings
+
+```
+M503
+```
+
+- Home Z axis only
+
+```
+G28 Z0
+```
+
+- Move nozzle to 0.0 Z offset
+
+```
+G1 F60 Z0
+```
+
+- Switches off soft endstops
+
+```
+M211 S0
+```
+
+- Manually slide a pice of paper (0.1mm) under the nozzle and slowly move the nozzle downwoards until the paper can barely move due to the friction of the nozzle and the bed.
+
+- Look at the Z-offset value at the printer screen and take a note about it
+
+```
+-6.3 mm
+```
+
+- Set Z-offset (add the paper thickness to the previous value)
+
+```
+M851 Z-6.4
+```
+
+- Switch on soft endstops
+
+```
+M211 S1
+```
+
+- Store current settings to EEPROM
+
+```
+M500
+```
+
+- Set EEPROM as active parameters
+
+```
+M501
+```
+
+- Display current active settings
+
+```
+M503
+```
+
+- Do homing
+- Move to 0 and check again with the paper
+
+```
+G1 F60 Z0
+```
+
+## gcode updates (Cura)
 
 Machine settings -> Start G-code
 
 ```
 G28 ; Home (Enable device)
 G29 ; Auto bed leveling
-G1 Z0.2 ; Down (Disable device)
-G4 P1000 ; Wait 1s to cut the filament
+G1 Z0.2 ; Down to 0.2mm (Disable device)
 ```
 
 [mygithub]: <https://github.com/pierre-quelin/Marlin/tree/MyCR10-S>
