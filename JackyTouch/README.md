@@ -155,4 +155,4 @@ G29 ; Auto bed leveling
 G1 Z0.2 ; Down to 0.2mm (Disable device)
 ```
 
-[mygithub]: <https://github.com/pierre-quelin/Marlin/tree/MyCR10-S>
+[mygithub]: <https://github.com/pierre-quelin/Marlin/tree/MyCR10-S_2.0.x>
