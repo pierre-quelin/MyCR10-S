@@ -1,7 +1,17 @@
 # My Creality CR-10S improvements
 
-## ExtruderFan - Another extruder fan
-![ExtruderFan](https://github.com/pierre-quelin/cr10s/blob/master/ExtruderFan.png)
+## Another extruder fan
 
-## JackyTouch - My personal touch
-![JackyTouch](https://github.com/pierre-quelin/cr10s/blob/master/JackyTouch.png)
+<img src="https://github.com/pierre-quelin/cr10s/blob/master/ExtruderFan.png" width="300">
+
+## My personal touch, "The JackyTouch"
+
+<img src="https://github.com/pierre-quelin/cr10s/blob/master/JackyTouch.png" width="300">
+
+## The Board
+
+[MKS-Robin-E3D](https://github.com/makerbase-mks/MKS-Robin-E3-E3D)
+
+## My customised [Marlin](https://marlinfw.org/) firmware (many thanks to them for their great job)
+
+[My Firmware](https://github.com/pierre-quelin/Marlin)
