@@ -1,4 +1,4 @@
-# JackyTouch - My personal touch
+# My personal touch, "The JackyTouch"
 
 ## Expected performances
 
@@ -22,28 +22,40 @@ ok P15 B0
 
 ## Assembly
 
-TODO
+## Firmware (Marlin)
 
-## Firmware updates (Marlin)
-[MyCR10-S Branch on github][mygithub]
-
-TODO
+[MyCR10-S Branch on github](https://github.com/pierre-quelin/Marlin)
+Configure a TOUCHMI probe that uses the same operating principle.
 
 ## Sensor wiring
 
-* Pinout module
+### Original Creality board pinout
 
-VCC: Module power supply.
-GND: Ground.
-D0: Digital signal of the output pulses.
-A0: Analog signal of the output pulses (not used).
+[CR10S-V2.1](https://github.com/pierre-quelin/cr10s/blob/master/JackyTouch/CR10S-V2.1.png)
+
+### MKS-Robin-E3D pinout
+
+[MKS-Robin-E3D-V1.0](https://github.com/pierre-quelin/cr10s/blob/master/JackyTouch/MKS-Robin-E3D-V1.0.jpg)
+
+### LM393 pinout
+
+[LM393](https://github.com/pierre-quelin/cr10s/blob/master/JackyTouch/LM393.pinout.jpg)
+   
+- VCC: Module power supply.
+- GND: Ground.
+- D0: Digital signal of the output pulses.
+- A0: Analog signal of the output pulses (not used).
+
+### Wiring
 
 - Remove the old Z limit switch connector from the board.
 
-- Connect the new sensor. **Be careful !!!**
+- Connect the new sensor to the board. **Be careful !!!**
 
 Connect the VCC wire first, then the GND wire.
+
 If the power indicator led is off, you made a mistake. Reconnect the GND wire correctly.
+
 To avoid a short circuit, connect the D0 wire only if the sensor is powered correctly.
 
 ## Calibrating Z-offset (Pronterface)
