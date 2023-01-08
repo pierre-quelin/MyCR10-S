@@ -10,7 +10,7 @@
 
 ## The Board
 
-[MKS-Robin-E3D](https://github.com/makerbase-mks/MKS-Robin-E3-E3D)
+[MKS-Robin-E3D-V1.0](https://github.com/makerbase-mks/MKS-Robin-E3-E3D)
 
 ## My customised [Marlin](https://marlinfw.org/) firmware (many thanks to them for their great job)
 
