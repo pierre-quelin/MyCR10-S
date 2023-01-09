@@ -4,56 +4,130 @@
 
 [MKS-Robin-E3D-V1.0](https://github.com/makerbase-mks/MKS-Robin-E3-E3D)
 
-## Power Loss Recovery
-
-[MKS-UPS12V](https://github.com/makerbase-mks/MKS-Power-Control/tree/master/MKS%20UPS12V-24V)
-
 ## My personal touch, "The JackyTouch"
 
 <img src="https://github.com/pierre-quelin/cr10s/blob/master/JackyTouch.png" width="300">
+
+[README](JackyTouch/README.md)
 
 ## Another extruder fan
 
 <img src="https://github.com/pierre-quelin/cr10s/blob/master/ExtruderFan.png" width="300">
 
+[README](ExtruderFan/README.md)
+
+## Power Loss Recovery
+
+<img src="https://github.com/pierre-quelin/cr10s/blob/master/MKS_UPS12V_V1.0.png" width="300">
+
+[README](MKS_UPS12V/README.md)
+
 ## My customised firmware (many thanks to [Marlin](https://marlinfw.org/) for their great job)
 
-[My firmware](https://github.com/pierre-quelin/Marlin)
+[MyCR10-S_2.1 Branch on github](https://github.com/pierre-quelin/Marlin)
 
 ## Unified bed leveling setup
 
-[General informations](https://marlinfw.org/docs/features/unified_bed_leveling.html)
+[Marlin UBL Startup Guide](https://marlinfw.org/docs/features/unified_bed_leveling.html)
 
 Setup and initial probing commands (Pronterface)
 
-    ;------------------------------------------
-    ;--- Setup and initial probing commands ---
-    ;------------------------------------------
-    M502            ; Reset settings to configuration defaults...
-    M500            ; ...and Save to EEPROM. Use this on a new install.
-    M501            ; Read back in the saved EEPROM.
-    
-    M190 S62        ; Wait for Bed Temperature 62°C. Helps accuracy
-    
-    G28             ; Home XYZ.
-    G29 P1          ; Do automated probing of the bed.
-    G29 P3 T        ; Do a ‘smart fill’ of missing mesh points.
-    
-    G29 T           ; View the Z compensation values.
-    G29 S0          ; Save UBL mesh points to EEPROM slot 0.
-    G29 F 10.0      ; Set Fade Height for correction at 10.0 mm.
-    G29 A           ; Activate the UBL System.
-    M500            ; Save current setup. WARNING: UBL will be active at power up, before any [`G28`](/docs/gcode/G028.html).
+- Reset settings to configuration defaults... ([help](https://marlinfw.org/docs/gcode/M502.html))
+
+```
+M502
+```
+- ...and Save to EEPROM. Use this on a new install. ([help](https://marlinfw.org/docs/gcode/M500.html))
+
+```
+M500
+```
+
+- Read back in the saved EEPROM. ([help](https://marlinfw.org/docs/gcode/M501.html))
+
+```
+M501
+```
+- Wait for Bed Temperature 62°C. Helps accuracy ([help](https://marlinfw.org/docs/gcode/M190.html))
+
+```
+M190 S62
+```
+
+- Home XYZ. ([help](https://marlinfw.org/docs/gcode/G028.html))
+
+```
+G28
+```
+
+- Do automated probing of the bed. ([help](https://marlinfw.org/docs/gcode/G029-ubl.html))
+
+```
+G29 P1
+```
+
+- Do a ‘smart fill’ of missing mesh points.
+
+```
+G29 P3 T
+```
+
+- View the Z compensation values.
+
+```
+G29 T
+```
+
+- Save UBL mesh points to EEPROM slot 0.
+
+```
+G29 S0
+```
+
+- Set Fade Height for correction at 10.0 mm.
+
+```
+G29 F 10.0
+```
+
+- Activate the UBL System.
+
+```
+G29 A
+```
+
+- Save current setup. WARNING: UBL will be active at power up, before any G28.
+
+```
+M500
+```
+
 
 Do a test...
 
-    ;----------------------------------------------------
-    ;--- Test the stored mesh                         ---
-    ;----------------------------------------------------
-    G29 L0          ; Load the mesh stored in slot 0 (from G29 S0)
-    G28             ; Home XYZ.
-    G29 J           ; Probe 3 points to find the plane of the bed
-    G26 P10         ; Print a pattern to test mesh accuracy.Prime Length of 10mm before print
+- Load the mesh stored in slot 0 (from G29 S0)
+
+```
+G29 L0
+```
+
+- Home XYZ.
+
+```
+G28
+```
+
+- Probe 3 points to find the plane of the bed
+
+```
+G29 J
+```
+
+- Print a pattern to test mesh accuracy.Prime Length of 10mm before print ([help](https://marlinfw.org/docs/gcode/G26.html))
+
+```
+G26 P10
+```
 
 ## Slicer G-code
 

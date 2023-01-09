@@ -1,6 +1,10 @@
 # MKS UPS12V
 
-## Firmware (Marlin)
+## Official Makerbase site
+
+[MKS-UPS12V](https://github.com/makerbase-mks/MKS-Power-Control/tree/master/MKS%20UPS12V-24V)
+
+## Firmware configuration (Marlin)
 
 [MyCR10-S Branch on github](https://github.com/pierre-quelin/Marlin)
 
@@ -33,6 +37,3 @@ Configuration_adv.h
 
 [MKS-Robin-E3D-V1.0](https://github.com/pierre-quelin/cr10s/blob/master/MKS_UPS12V/MKS-Robin-E3D-V1.0.jpg)
 
-## Official Makerbase site
-
-[MKS-UPS12V](https://github.com/makerbase-mks/MKS-Power-Control/tree/master/MKS%20UPS12V-24V)

@@ -24,8 +24,9 @@ ok P15 B0
 
 ## Firmware (Marlin)
 
-[MyCR10-S Branch on github](https://github.com/pierre-quelin/Marlin)
 Configure a TOUCHMI probe that uses the same operating principle.
+
+[MyCR10-S_2.1 Branch on github](https://github.com/pierre-quelin/Marlin)
 
 ## Sensor wiring
 
@@ -64,49 +65,50 @@ To avoid a short circuit, connect the D0 wire only if the sensor is powered corr
 - Launch Pronterface
 - Do Homing and read current Z-offset
 
-```...
+```
+...
 echo:Z-Probe Offset (mm):
 echo:  M851 Z-6.43
 ...
 ```
 
-- Reset current offset
+- Reset current offset ([help](https://marlinfw.org/docs/gcode/M851.html))
 
 ```
 M851 Z0
 ```
 
-- Store offset to EEPROM
+- Store offset to EEPROM ([help](https://marlinfw.org/docs/gcode/M500.html))
 
 ```
 M500
 ```
 
-- Set EEPROM as active parameters
+- Set EEPROM as active parameters ([help](https://marlinfw.org/docs/gcode/M501.html))
 
 ```
 M501
 ```
 
-- Display current active settings
+- Display current active settings ([help](https://marlinfw.org/docs/gcode/M503.html))
 
 ```
 M503
 ```
 
-- Home Z axis only
+- Home Z axis only ([help](https://marlinfw.org/docs/gcode/G028.html))
 
 ```
 G28 Z0
 ```
 
-- Move nozzle to 0.0 Z offset
+- Move nozzle to 0.0 Z offset ([help](https://marlinfw.org/docs/gcode/G000-G001.html))
 
 ```
 G1 F60 Z0
 ```
 
-- Switches off soft endstops
+- Switches off soft endstops ([help](https://marlinfw.org/docs/gcode/M211.html))
 
 ```
 M211 S0
@@ -120,7 +122,7 @@ M211 S0
 -6.3 mm
 ```
 
-- Set Z-offset (add the paper thickness to the previous value)
+- Set Z-offset (add the paper thickness to the previous value) 
 
 ```
 M851 Z-6.4
